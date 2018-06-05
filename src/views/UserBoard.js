@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from "react-redux";
 import Grid from '@material-ui/core/Grid';
 import LocationListContainer from './../containers/LocationListContainer';
 import ForecastExtendedContainer from './../containers/ForecastExtendedContainer';
@@ -24,8 +25,8 @@ class Boards extends React.Component {
 
 
   render() {
+    const nombre = "reemplazar por data de redux"
 
-    const nombre = 'laura';
     return (
       <div className="fondo-home">
         <div className="username">{`Usuario: ${nombre}`}</div>
@@ -43,5 +44,6 @@ class Boards extends React.Component {
   }
 }
 
+//Crear funcion mapStateToProps
 
-export default Boards;
+export default connect(null,{})(Boards);
